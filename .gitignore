@@ -1,0 +1,17 @@
+# Ignore environment files with secrets
+.env
+
+# Ignore Python cache and build junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/          # sometimes venvs are named like this too
+
+# Ignore database files (if you ever export local .db)
+*.db
+*.sqlite
+*.bak
