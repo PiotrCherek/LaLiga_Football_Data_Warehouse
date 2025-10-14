@@ -1,6 +1,7 @@
 import json, requests, os
 from pathlib import Path
-from meteostat import Point, Hourly
+from meteostat import Stations, Hourly
+from datetime import datetime, timedelta
 
 
 if __name__ == '__main__':
@@ -20,9 +21,26 @@ if __name__ == '__main__':
         # Time of the match
         match_date_time = match['utcDate']
         match_date = match_date_time[:10]
-        match_time = match_date_time[11:-1]
         
+        # Getting specifics from date
+        match_year = int(match_date[:4])
+        match_month = int(match_date[5:7])
+        match_day = int(match_date[8:10])
+        
+        # Getting specifics from time
+        match_time = match_date_time[11:-1]
+        match_hour = int(match_time[:2])
+        match_minute = int(match_time[3:5])
+        
+        # Setting start and end time for weather data fetch
+        start = datetime(match_year, match_month, match_day, match_hour, match_minute)
+        end = start + timedelta(hours=2)
+
         # Where the match was
         home_team = match['homeTeam']['name']
         location = stadium_coords[home_team]['coordinates']
         
+        # Get weather data
+        data = Hourly(location, start, end)
+        data = data.fetch()
+        print(data)

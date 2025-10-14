@@ -1,5 +1,6 @@
 import json, requests, os
 from pathlib import Path
+from meteostat import Stations
 
 def get_teams_stadium_coords(teams: list) -> dict:
     # Escape double quotes in team names
@@ -28,7 +29,13 @@ def get_teams_stadium_coords(teams: list) -> dict:
         team = result['teamLabel']['value']
         stadium = result['stadiumLabel']['value']
         coord = result['coord']['value']
-        coords_dict[team] = {'stadium': stadium, 'coordinates': coord}
+
+        # Get station ID for meteostat
+        lat, lon = coord.replace('Point(', '').replace(')', '').split()
+        stations = Stations()
+        stations = stations.nearby(float(lat), float(lon))
+        station = stations.fetch(1)
+        coords_dict[team] = {'stadium': stadium, 'coordinates': coord, 'station_id': station.index[0] if not station.empty else None}
 
     return coords_dict
 
