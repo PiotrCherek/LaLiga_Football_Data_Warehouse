@@ -1,8 +1,38 @@
 {
+  "Real Betis Balompié": {
+    "stadium": "Estadio Benito Villamarín",
+    "coordinates": "Point(-5.981611 37.356403)",
+    "station_id": "63866"
+  },
+  "Valencia CF": {
+    "stadium": "Mestalla Stadium",
+    "coordinates": "Point(-0.358333 39.474722)",
+    "station_id": "63723"
+  },
+  "Athletic Club": {
+    "stadium": "Joaquim Portugal Stadium",
+    "coordinates": "Point(-44.243408 -21.127528)",
+    "station_id": "68906"
+  },
+  "Villarreal CF": {
+    "stadium": "Ciudad Deportiva Villarreal CF",
+    "coordinates": "Point(-0.11501 39.94046)",
+    "station_id": "63723"
+  },
+  "RCD Espanyol de Barcelona": {
+    "stadium": "Estadi de Sarrià",
+    "coordinates": "Point(2.133333333 41.393055555)",
+    "station_id": "63671"
+  },
   "FC Barcelona": {
     "stadium": "Johan Cruijff Stadium",
     "coordinates": "Point(2.050506 41.374224)",
     "station_id": "63671"
+  },
+  "Getafe CF": {
+    "stadium": "Estadio Coliseum",
+    "coordinates": "Point(-3.714722 40.325556)",
+    "station_id": "63799"
   },
   "RCD Mallorca": {
     "stadium": "Estadi Mallorca Son Moix",
@@ -14,31 +44,6 @@
     "coordinates": "Point(-5.94778 37.3528)",
     "station_id": "63866"
   },
-  "Valencia CF": {
-    "stadium": "Mestalla Stadium",
-    "coordinates": "Point(-0.358333 39.474722)",
-    "station_id": "63723"
-  },
-  "RCD Espanyol de Barcelona": {
-    "stadium": "Estadi de Sarrià",
-    "coordinates": "Point(2.133333333 41.393055555)",
-    "station_id": "63671"
-  },
-  "Villarreal CF": {
-    "stadium": "Ciudad Deportiva Villarreal CF",
-    "coordinates": "Point(-0.11501 39.94046)",
-    "station_id": "63723"
-  },
-  "Athletic Club": {
-    "stadium": "Joaquim Portugal Stadium",
-    "coordinates": "Point(-44.243408 -21.127528)",
-    "station_id": "68906"
-  },
-  "Getafe CF": {
-    "stadium": "Estadio Coliseum",
-    "coordinates": "Point(-3.714722 40.325556)",
-    "station_id": "63799"
-  },
   "UD Las Palmas": {
     "stadium": "Gran Canaria Stadium",
     "coordinates": "Point(-15.456667 28.1)",
@@ -49,9 +54,24 @@
     "coordinates": "Point(-8.740328 42.211861)",
     "station_id": "63971"
   },
+  "CD Leganés": {
+    "stadium": "Estadio Municipal de Butarque",
+    "coordinates": "Point(-3.7607 40.3404)",
+    "station_id": "63799"
+  },
+  "Deportivo Alavés": {
+    "stadium": "Mendizorrotza Stadium",
+    "coordinates": "Point(-2.688044 42.837111)",
+    "station_id": "63772"
+  },
   "Girona FC": {
     "stadium": "Montilivi Stadium",
     "coordinates": "Point(2.828611 41.961389)",
     "station_id": "63624"
+  },
+  "Real Madrid Club de Fútbol": {
+    "stadium": "Santiago Bernabéu Stadium",
+    "coordinates": "Point(-3.68835 40.45306)",
+    "station_id": "63799"
   }
 }

@@ -16,6 +16,8 @@ if __name__ == '__main__':
         matches = json.load(file)
     with open(stadium_coords_path, 'r') as file:
         stadium_coords = json.load(file)
+
+    weather_records = []
     
     for match in matches['matches']:
         # Time of the match
@@ -38,9 +40,20 @@ if __name__ == '__main__':
 
         # Where the match was
         home_team = match['homeTeam']['name']
-        location = stadium_coords[home_team]['coordinates']
+        station_id = stadium_coords[home_team]['station_id']
         
         # Get weather data
-        data = Hourly(location, start, end)
+        data = Hourly(station_id, start, end)
         data = data.fetch()
-        print(data)
+        if not data.empty:
+            avg_weather = data.mean(numeric_only=True).to_dict()
+        else:
+            avg_weather = {}
+        
+        weather_record = {'match_id': match['id'], **avg_weather}
+        weather_records.append(weather_record)
+    
+    # Save weather data to JSON
+    file_name = base_path / 'data' / 'raw' / 'weather_data.json'
+    with open(file_name, 'w', encoding='utf-8') as file:
+        json.dump(weather_records, file, ensure_ascii=False, indent=2)
