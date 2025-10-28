@@ -1,0 +1,59 @@
+Table matches {
+  match_id int [pk]
+  home_team_id int
+  away_team_id int
+  stadium_id int
+  weather_id int
+  date_id int
+  season varchar
+  home_goals int
+  away_goals int
+  half_time_home_goals int
+  half_time_away_goals int
+  winner varchar
+}
+
+Table dimTeam {
+  team_id int [pk]
+  name varchar
+}
+
+Table dimStadium {
+  stadium_id int [pk]
+  lat numeric
+  lon numeric
+}
+
+Table dimWeather {
+  weather_id int [pk]
+  temp varchar
+  dwpt varchar
+  rhum varchar
+  prcp varchar
+  snow varchar
+  wdir varchar
+  wspd varchar
+  wpgt varchar
+  pres varchar
+  tsun varchar
+  coco varchar
+}
+
+Table dimDate {
+  date_id int [pk]
+  year int
+  month int
+  day int
+}
+
+Ref: matches.home_team_id > dimTeam.team_id
+Ref: matches.away_team_id > dimTeam.team_id
+Ref: matches.stadium_id > dimStadium.stadium_id
+Ref: matches.weather_id > dimWeather.weather_id
+Ref: matches.date_id > dimDate.date_id
+
+
+
+
+
+
