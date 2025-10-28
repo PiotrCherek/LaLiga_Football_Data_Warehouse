@@ -1,17 +1,27 @@
 {
-  "RCD Espanyol de Barcelona": {
-    "stadium": "Estadi de Sarrià",
-    "coordinates": "Point(2.133333333 41.393055555)",
-    "station_id": "63671"
-  },
   "Real Betis Balompié": {
     "stadium": "Estadio Benito Villamarín",
     "coordinates": "Point(-5.981611 37.356403)",
     "station_id": "63866"
   },
+  "Athletic Club": {
+    "stadium": "Joaquim Portugal Stadium",
+    "coordinates": "Point(-44.243408 -21.127528)",
+    "station_id": "68906"
+  },
   "FC Barcelona": {
-    "stadium": "Johan Cruijff Stadium",
-    "coordinates": "Point(2.050506 41.374224)",
+    "stadium": "Nou Palau Blaugrana",
+    "coordinates": "Point(2.118333333 41.379722222)",
+    "station_id": "63671"
+  },
+  "Valencia CF": {
+    "stadium": "Mestalla Stadium",
+    "coordinates": "Point(-0.358333 39.474722)",
+    "station_id": "63723"
+  },
+  "RCD Mallorca": {
+    "stadium": "Estadi Mallorca Son Moix",
+    "coordinates": "Point(2.63 39.59)",
     "station_id": "63671"
   },
   "Sevilla FC": {
@@ -19,20 +29,10 @@
     "coordinates": "Point(-5.94778 37.3528)",
     "station_id": "63866"
   },
-  "RCD Mallorca": {
-    "stadium": "Estadi Mallorca Son Moix",
-    "coordinates": "Point(2.63 39.59)",
+  "RCD Espanyol de Barcelona": {
+    "stadium": "Estadi de Sarrià",
+    "coordinates": "Point(2.133333333 41.393055555)",
     "station_id": "63671"
-  },
-  "Athletic Club": {
-    "stadium": "Joaquim Portugal Stadium",
-    "coordinates": "Point(-44.243408 -21.127528)",
-    "station_id": "68906"
-  },
-  "Valencia CF": {
-    "stadium": "Mestalla Stadium",
-    "coordinates": "Point(-0.358333 39.474722)",
-    "station_id": "63723"
   },
   "Villarreal CF": {
     "stadium": "Ciudad Deportiva Villarreal CF",
@@ -44,6 +44,11 @@
     "coordinates": "Point(-15.456667 28.1)",
     "station_id": "67667"
   },
+  "RC Celta de Vigo": {
+    "stadium": "Abanca Balaídos Stadium",
+    "coordinates": "Point(-8.740328 42.211861)",
+    "station_id": "63971"
+  },
   "Getafe CF": {
     "stadium": "Estadio Coliseum",
     "coordinates": "Point(-3.714722 40.325556)",
@@ -54,47 +59,42 @@
     "coordinates": "Point(-2.688044 42.837111)",
     "station_id": "63772"
   },
-  "CD Leganés": {
-    "stadium": "Estadio Municipal de Butarque",
-    "coordinates": "Point(-3.7607 40.3404)",
-    "station_id": "63799"
-  },
-  "RC Celta de Vigo": {
-    "stadium": "Abanca Balaídos Stadium",
-    "coordinates": "Point(-8.740328 42.211861)",
-    "station_id": "63971"
-  },
   "Girona FC": {
     "stadium": "Montilivi Stadium",
     "coordinates": "Point(2.828611 41.961389)",
     "station_id": "63624"
   },
-  "Real Valladolid": {
+  "CD Leganés": {
+    "stadium": "Estadio Municipal de Butarque",
+    "coordinates": "Point(-3.7607 40.3404)",
+    "station_id": "63799"
+  },
+  "Real Madrid CF": {
     "stadium": "Estadio Nuevo José Zorrilla",
     "coordinates": "Point(-4.761111 41.644444)",
     "station_id": "63845"
   },
-  "Real Madrid Club de Fútbol": {
+  "Club Atlético de Madrid": {
     "stadium": "Santiago Bernabéu Stadium",
     "coordinates": "Point(-3.68835 40.45306)",
     "station_id": "63799"
   },
-  "Club Atlético Osasuna": {
+  "Real Sociedad de Fútbol": {
     "stadium": "El Sadar Stadium",
     "coordinates": "Point(-1.636944 42.796667)",
     "station_id": "63270"
   },
-  "Real Sociedad": {
+  "CA Osasuna": {
     "stadium": "Anoeta Stadium",
     "coordinates": "Point(-1.973617 43.301378)",
     "station_id": "63270"
   },
-  "Rayo Vallecano": {
+  "Rayo Vallecano de Madrid": {
     "stadium": "Campo de Fútbol de Vallecas",
     "coordinates": "Point(-3.658961 40.391944)",
     "station_id": "63799"
   },
-  "Atlético de Madrid": {
+  "Real Valladolid CF": {
     "stadium": "Metropolitano Stadium",
     "coordinates": "Point(-3.599444 40.436111)",
     "station_id": "63799"

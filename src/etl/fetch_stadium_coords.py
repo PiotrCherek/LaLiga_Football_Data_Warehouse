@@ -39,7 +39,9 @@ def get_teams_stadium_coords(teams: list) -> dict:
 
     return coords_dict
 
-def get_stadiums_by_qids(qids):
+def get_stadiums_by_qids(name_and_qids: dict) -> dict:
+    qids = list(name_and_qids.values())
+    names = list(name_and_qids.keys())
     url = "https://query.wikidata.org/sparql"
     headers = {'Accept': 'application/sparql-results+json'}
     values_clause = " ".join(f"wd:{qid}" for qid in qids)
@@ -56,8 +58,10 @@ def get_stadiums_by_qids(qids):
     data = response.json()
     results = data['results']['bindings']
     coords_dict = {}
+    index = 0
     for result in results:
-        team = result['teamLabel']['value']
+        team = names[index]
+        index += 1
         stadium = result['stadiumLabel']['value']
         coord = result['coord']['value']
 
@@ -89,7 +93,12 @@ if __name__ == '__main__':
 
     found_teams = set(stadium_coords.keys())
     missing_teams = set(unique_teams) - found_teams
-    missing_qids = ["Q8682", "Q8701", "Q10315", "Q10286", "Q10300", "Q10319"]
+    missing_qids = {"Real Madrid CF": "Q8682",
+                    "Club Atlético de Madrid": "Q8701",
+                    "Real Sociedad de Fútbol": "Q10315",
+                    "CA Osasuna": "Q10286",
+                    "Rayo Vallecano de Madrid": "Q10300",
+                    "Real Valladolid CF": "Q10319"}
     missing_coords = get_stadiums_by_qids(missing_qids)
     stadium_coords.update(missing_coords)
 

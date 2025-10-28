@@ -45,6 +45,8 @@ if __name__ == '__main__':
         # Get weather data
         data = Hourly(station_id, start, end)
         data = data.fetch()
+        
+        # Get average weather data for the match period
         if not data.empty:
             avg_weather = data.mean(numeric_only=True).to_dict()
         else:
@@ -52,7 +54,10 @@ if __name__ == '__main__':
         
         weather_record = {'match_id': match['id'], **avg_weather}
         weather_records.append(weather_record)
-    
+        
+        # Print progress
+        print(f'match_id: {match['id']}')
+        
     # Save weather data to JSON
     file_name = base_path / 'data' / 'raw' / 'weather_data.json'
     with open(file_name, 'w', encoding='utf-8') as file:
