@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
     found_teams = set(stadium_coords.keys())
     missing_teams = set(unique_teams) - found_teams
-    missing_qids = ["Q8682", "Q176186", "Q180363", "Q180372", "Q180370", "Q180364"]
+    missing_qids = ["Q8682", "Q8701", "Q10315", "Q10286", "Q10300", "Q10319"]
     missing_coords = get_stadiums_by_qids(missing_qids)
     stadium_coords.update(missing_coords)
 
